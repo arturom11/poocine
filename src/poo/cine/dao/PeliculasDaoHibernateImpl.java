@@ -43,11 +43,11 @@ public class PeliculasDaoHibernateImpl implements PeliculasDao {
 
     @Override
     public void guardar(Pelicula pelicula) {
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-        session.save(pelicula);
-        session.getTransaction().commit();
-        session.close();
+        try (Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+            session.save(pelicula);
+            session.getTransaction().commit();
+        }
     }
     
 }
