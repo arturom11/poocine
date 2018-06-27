@@ -364,7 +364,7 @@ public class PantallaAdministracionPelicula extends javax.swing.JFrame {
             gestor.guardarPelicula(nueva);
 
             // notificamos al usuario
-            JOptionPane.showMessageDialog(null, "La Película " + nueva + "ha sido agregada con éxito");
+            JOptionPane.showMessageDialog(null, "La Película " + nueva + " ha sido agregada con éxito");
         }
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
