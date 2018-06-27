@@ -24,9 +24,9 @@ public class GenerosDaoHibernateImpl implements GenerosDao {
 
     @Override
     public List<Genero> obtenerTodos() {
+        List<Genero> retorno;
         Session session = sessionFactory.openSession();
-        List<Genero> retorno = session.createQuery("from Genero").list();
-        session.close();
+        retorno = session.createQuery("from Genero").list();
         
         return retorno;
     }
